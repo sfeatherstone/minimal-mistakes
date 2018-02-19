@@ -1,4 +1,4 @@
-# Kotlin: Declaration order matters.
+![face palm](assets/images/facepalm.jpg)
 
 I encountered a NPE implementing the new Android `ViewModel` class recently. Fixing the problem took a little longer due something I didn’t understand about Kotlin until now.
 Declaring class member values after the init block will not be initialised when the `init` block is executed.
@@ -50,7 +50,7 @@ class MyClass {
 
 This time the `answer` delegate will be set in the `init` block
 
-Thanks for reading, but I would like to point out that the example where I caught this was more complicated than this simplified example. My example was using [http://greenrobot.org/eventbus/](EventBus) which I have written about in a previous post. My example looked a bit more like the following:
+Thanks for reading, but I would like to point out that the example where I caught this was more complicated than this simplified example. My example was using [Eventbus](http://greenrobot.org/eventbus/) which I have written about in a previous post. My example looked a bit more like the following:
 
 ```kotlin
 class MyClass {
@@ -69,4 +69,4 @@ class MyClass {
 
 I didn’t realise that by this time `Eventbus` already had a `MyDomainObject` and thus would call the `bind()` function synchronously from the `EventBus.getDefault().register(this)` call.
 
-[<https://medium.com/@ubikspace/kotlin-declaration-order-matters-9b2788567a78>](Original post)
+[Original post](https://medium.com/@ubikspace/kotlin-declaration-order-matters-9b2788567a78)
