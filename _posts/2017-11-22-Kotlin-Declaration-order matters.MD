@@ -1,4 +1,10 @@
-![face palm](assets/images/facepalm.jpg)
+---
+title: "Kotlin: Declaration Order matters"
+excerpt: "Getting the declaration order wrong in Kotlan can lead to a NPE."
+header:
+  image: /assets/images/facepalm.jpg
+---
+
 
 I encountered a NPE implementing the new Android `ViewModel` class recently. Fixing the problem took a little longer due something I didn’t understand about Kotlin until now.
 Declaring class member values after the init block will not be initialised when the `init` block is executed.
