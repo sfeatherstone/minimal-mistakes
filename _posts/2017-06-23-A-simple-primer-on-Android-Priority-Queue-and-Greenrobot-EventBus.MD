@@ -1,3 +1,10 @@
+---
+title: "A Simple Primer On Android Priority Queue And Greenrobot Eventbus"
+excerpt: "Android asynchronous tasks without the difficulty"
+categories: kotlin java android asynchronous
+header:
+  image: /assets/images/greenbus.jpg
+---
 
 Dealing with asynchronous tasks in Android can be a headache. I have been introduced to two open source libraries that make this all the easier. I will attempt to explain the basics here to get you started with them. I will show an Android Studio boiler plate application that creates a simple job, that then returns to the UI thread, where we display a toast.
 
